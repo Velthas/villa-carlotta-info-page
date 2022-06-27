@@ -1,4 +1,4 @@
-//This generates HTML for a dropdown menu
+// This generates HTML for a dropdown menu
 const dropdownGenerator = (function () {
     function createLogo() {
       const logo = document.createElement('div');
@@ -62,6 +62,36 @@ const dropdownGenerator = (function () {
   
       return navLinks;
     }
+
+    // Handles toggling between active and visible styles for menus of the navbar
+    function setActive(item) {
+      // Get the current active element
+      const activeNavElement = document.querySelector('.parentItem.active');
+      const activeSubMenu = document.querySelector('.sub-menu.visible');
+
+      // Get the item being clicked
+      const menuHeader = item.querySelector('.parentItem');
+      const submenu = item.querySelector('.sub-menu');
+
+      // If you are clicking the same menu, just close it
+      if(activeNavElement === menuHeader) {
+        menuHeader.classList.remove('active');
+        if(submenu) submenu.classList.remove('visible');
+      } // Otherwise remove the old one and set the other one visible and active
+      else if(activeNavElement !== null) {
+        activeNavElement.classList.remove('active');
+        if(activeSubMenu) activeSubMenu.classList.remove('visible');
+
+        menuHeader.classList.add('active');
+        if(submenu) submenu.classList.add('visible');
+      }
+      // If no menu item is active, just set the clicked one active.
+      else if(activeNavElement === null) {
+        menuHeader.classList.add('active');
+        if(submenu) submenu.classList.add('visible');
+      }
+  
+    }
   
     function addEvents() {
       const menuItems = document.querySelectorAll('.menuItem');
@@ -69,27 +99,10 @@ const dropdownGenerator = (function () {
         const menuHeader = item.querySelector('.parentItem');
         const submenu = item.querySelector('.sub-menu');
   
-        menuHeader.addEventListener('mouseenter', function () {
-          if(submenu !== null) submenu.classList.add('visible');
-          menuHeader.classList.add('active');
+        menuHeader.addEventListener('click', function () {
+          setActive(item);
         });
-  
-        menuHeader.addEventListener('mouseleave', function () {
-          if(submenu !== null) submenu.classList.remove('visible');
-          menuHeader.classList.remove('active');
-        });
-  
-        if(submenu) {
-        submenu.addEventListener('mouseenter', function () {
-          if(submenu !== null) submenu.classList.add('visible');
-          menuHeader.classList.add('active');
-        });
-  
-        submenu.addEventListener('mouseleave', function () {
-          if(submenu !== null) submenu.classList.remove('visible');
-          menuHeader.classList.remove('active');
-        });
-      }
+
       });
     }
   
@@ -136,10 +149,8 @@ const dropdownGenerator = (function () {
 
         burger.classList.toggle('active');
 
-
       })
       
-
     }
 
     addBurgerEvents();

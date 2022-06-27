@@ -14,7 +14,7 @@ nav {
     display: flex; 
     justify-content: space-evenly;
     width: 100%;
-    height: 100px;
+    height: 98px;
     background-color: white;
     color: #323332;
     /* I am not sure why but there is space between the nav and hero div, this solves it but seems like patchwork at best */

@@ -357,6 +357,14 @@ h1.title {
     .hero-text {
         width: auto;
     }
+
+    .image-block {
+        background-position: center;
+    }
+
+    .room-image {
+        background-position: center;
+    }
 }
 
 @media screen and (max-width: 320px) {

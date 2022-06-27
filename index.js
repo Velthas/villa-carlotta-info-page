@@ -70,24 +70,26 @@ const dropdownGenerator = (function () {
         const submenu = item.querySelector('.sub-menu');
   
         menuHeader.addEventListener('mouseenter', function () {
-          submenu.classList.add('visible');
+          if(submenu !== null) submenu.classList.add('visible');
           menuHeader.classList.add('active');
         });
   
         menuHeader.addEventListener('mouseleave', function () {
-          submenu.classList.remove('visible');
+          if(submenu !== null) submenu.classList.remove('visible');
           menuHeader.classList.remove('active');
         });
   
+        if(submenu) {
         submenu.addEventListener('mouseenter', function () {
-          submenu.classList.add('visible');
+          if(submenu !== null) submenu.classList.add('visible');
           menuHeader.classList.add('active');
         });
   
         submenu.addEventListener('mouseleave', function () {
-          submenu.classList.remove('visible');
+          if(submenu !== null) submenu.classList.remove('visible');
           menuHeader.classList.remove('active');
         });
+      }
       });
     }
   

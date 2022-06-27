@@ -21,36 +21,37 @@
             </div>
             <ul class="nav-links">
                 <li class="menuItem">
-                    <a class="parentItem">Hello &#x25BC</a>
+                    <a class="parentItem">Info &#x25BC</a>
                     <ul class="sub-menu">
-                        <li class="subItem">There</li>
-                        <li class="subItem">Handsome</li>
-                        <li class="subItem">Devil</li>
+                        <a href="#informazioni-base"><li class="subItem">Check-in & Check-out</li></a>
+                        <a href="#colazione"><li class="subItem">Colazione</li></a>
+                        <a href="#wifi">
+                            <li class="subItem">Wi-Fi</li>
+                        </a>
                     </ul>
                 </li>
                 <li class="menuItem">
-                    <a class="parentItem">Hello &#x25BC</a>
+                    <a class="parentItem">Camere &#x25BC</a>
                     <ul class="sub-menu">
-                        <li class="subItem">There</li>
-                        <li class="subItem">Handsome</li>
-                        <li class="subItem">Devil</li>
+                        <a href="#camere" onclick="document.querySelectorAll('.room-button')[0].click()">
+                            <li class="subItem">Classic</li>
+                        </a>
+                        <a href="#camere" onclick="document.querySelectorAll('.room-button')[1].click()">
+                            <li class="subItem">Tripla</li>
+                        </a>
+                        <a href="#camere" onclick="document.querySelectorAll('.room-button')[2].click()">
+                            <li class="subItem">Quadrupla</li>
+                        </a>
+                        <a href="#camere" onclick="document.querySelectorAll('.room-button')[3].click()">
+                            <li class="subItem">Suite</li>
+                        </a>
                     </ul>
                 </li>
                 <li class="menuItem">
-                    <a class="parentItem">Hello &#x25BC</a>
-                    <ul class="sub-menu">
-                        <li class="subItem">There</li>
-                        <li class="subItem">Handsome</li>
-                        <li class="subItem">Devil</li>
-                    </ul>
+                    <a class="parentItem" href="#ristorante">Ristorante</a>
                 </li>
                 <li class="menuItem">
-                    <a class="parentItem">Hello &#x25BC</a>
-                    <ul class="sub-menu">
-                        <li class="subItem">There</li>
-                        <li class="subItem">Handsome</li>
-                        <li class="subItem">Devil</li>
-                    </ul>
+                    <a class="parentItem" href="#contatti">Contatti</a>
                 </li>
             </ul>
             <div id="burger-menu">
@@ -62,62 +63,94 @@
         <div class="welcome">
             <div class="hero-text">
                 <h1>Benvenuti a Villa Carlotta</h1>
-                <p class="low-contrast">Dal nostro staff il più sincero augurio per uno splendido soggiorno all'insegna di momenti di puro relax. </p>
+                <p class="low-contrast">Dal nostro staff il più sincero augurio per uno splendido soggiorno all'insegna del relax </p>
             </div>
         </div>
-        <div class="content">
-            <div>
-                <h2>Orari Check-in & Check-out</h2>
-                <p>E' possibile effettuare il <strong>Check-in dalle ore 14:00</strong> della giornata d'arrivo prevista. Il <strong>Check-out è previsto entro le 11:00 della data di partenza</strong>. Se doveste avere bisogno di lasciare la camera dopo l'orario previsto vi preghiamo di informare la reception.</p>
-                <p>Al termine del vostro soggiorno dovrete restituire le chiavi magnetizzate al personale addetto alla reception. Qualora abbiate noi lasciato i vostri documenti, sarà nostra cura restituirveli prima della partenza. </p>
-            </div>
-            <div class="image-block" style="background-image: url(./images/Cinzia.jpg);"></div>
-        </div>
-        <div class="content">
-            <div class="image-block" style="background-image: url(./images/colazioni.jpg)"></div>
+        <div class="flex-container">
+            <h1 class="title" id="informazioni-titolo">INFORMAZIONI BASE</h1>
+            <div class="content" id="informazioni-base">
                 <div>
-                    <h2>Colazioni</h2>
-                    <p>
-                        <strong>La colazione è servita dalle 7:00 alle 10:00 nella saletta vetrata adiacente alla reception.</strong> La ricca selezione del buffet include biscotti, torte e cornetti prodotti dalla nostra pasticceria, marmellate, cereali, yogurt biologici, frutta fresca, salumi, succhi di frutta, bevande calde e molto altro.
-                    </p>
-                    <p>
-                        Saranno inoltre soddisfatte tutte le esigenze di ospiti che hanno diete particolari o soffrono di intolleranze alimentari.
-                        I prodotti freschi e genuini e la splendida veduta sul parco vi daranno tutta la carica necessaria per affrontare al meglio la giornata!
-                    </p>
+                    <h2>Orari Check-in & Check-out</h2>
+                    <p>E' possibile effettuare il <strong>Check-in dalle ore 14:00</strong> della giornata d'arrivo prevista. Il <strong>Check-out è previsto entro le 11:00 della data di partenza</strong>. Se doveste avere bisogno di lasciare la camera dopo l'orario previsto vi preghiamo di informare la reception.</p>
+                    <p>Al termine del vostro soggiorno dovrete restituire le chiavi magnetizzate al personale addetto alla reception. Qualora abbiate noi lasciato i vostri documenti, sarà nostra cura restituirveli prima della partenza. </p>
                 </div>
-        </div>
-        <div class="content">
-            <div>
-                <h2>Wi-Fi</h2>
-                <p><strong>La password del Wi-Fi è "villacarlotta".</strong> L'hotel offre due principali reti Wi-Fi: "villacarlotta" e "villacarlotta 1". Verificando sul vostro dispositivo noterete che le reti sono aperte, ma non fatevi trarre in inganno: l'autenticazione è comunque richiesta. Collegarsi dovrebbe infatti far apparire un form dove inserire la password. </p>
-                <p>Non allarmatevi se la rete sembra non funzionare dopo un certo periodo di tempo: per continuare a navigare basterà effettuare la riconnessione alla rete ed inserire nuovamente la password. </p>
+                <div class="image-block" style="background-image: url(./images/Cinzia.jpg);"></div>
             </div>
-            <div class="image-block" style="background-image: url(./images/internet.jpg)"></div>
-        </div>
-        <div class="room-type">
-            <div class="button-container">
-                <div class="room-button active">Classic "Malavita"</div>
-                <div class="room-button">Tripla "Gilestra"</div>
-                <div class="room-button">Quadrupla "Gilestra"</div>
-                <div class="room-button">Suite "Principe"</div>
+            <div class="content reverse" id="colazione">
+                <div class="image-block" style="background-image: url(./images/colazioni.jpg)"></div>
+                    <div>
+                        <h2>Colazioni</h2>
+                        <p>
+                            <strong>La colazione è servita dalle 7:00 alle 10:00 nella saletta vetrata adiacente alla reception.</strong> La ricca selezione del buffet include biscotti, torte e cornetti prodotti dalla nostra pasticceria, marmellate, cereali, yogurt biologici, frutta fresca, salumi, succhi di frutta, bevande calde e molto altro.
+                        </p>
+                        <p>
+                            Saranno inoltre soddisfatte tutte le esigenze di ospiti che hanno diete particolari o soffrono di intolleranze alimentari.
+                            I prodotti freschi e genuini e la splendida veduta sul parco vi daranno tutta la carica necessaria per affrontare al meglio la giornata!
+                        </p>
+                    </div>
             </div>
-            <div class="room-content">
-                <div class="room-image" style="background-image: url(./images/Classic.jpg);"></div>
-                <div class="room-text">
-                    <h2>Classic "Malavita"</h2>
-                    <p>Le Classic "Malavita" sono camere matrimoniali molto spaziose e luminose. Alcune godono della vista del parco al primo piano, altre al piano terra vantano l’accesso al giardino. Quattro di queste ultime accedono al giardino interno, luogo ideale dove godere di momenti di relax.</p>
-                    <p>Lo stile ricercato che caratterizza ognuna delle camere Classic coniuga un arredo moderno alla pietra viva, originale delle pareti interne. Questo particolare connubio le rende il luogo ideale per trascorrere soggiorni piacevoli e vivere lo charme di Ragusa.</p>
-                    <h3>Dotazione</h3>
-                    <ul>
-                        <li>Ampiezza 30mq</li>
-                        <li>Letto matrimoniale king size</li>
-                        <li>Aria condizionata e riscaldamento autonomo centralizzato</li>
-                        <li>Accesso diretto al giardino</li>
-                        <li>Frigobar</li>
-                    </ul>
+            <div class="content" id="wifi">
+                <div>
+                    <h2>Wi-Fi</h2>
+                    <p><strong>La password del Wi-Fi è "villacarlotta".</strong> L'hotel offre due principali reti Wi-Fi: "villacarlotta" e "villacarlotta 1". Verificando sul vostro dispositivo noterete che le reti sono aperte, ma non fatevi trarre in inganno: l'autenticazione è comunque richiesta. Collegarsi dovrebbe infatti far apparire un form dove inserire la password. </p>
+                    <p>Non allarmatevi se la rete sembra non funzionare dopo un certo periodo di tempo: per continuare a navigare basterà effettuare la riconnessione alla rete ed inserire nuovamente la password. </p>
+                </div>
+                <div class="image-block" style="background-image: url(./images/internet.jpg)"></div>
+            </div>
+            <h1 class="telephone-info">PER QUALSIASI RICHIESTA POTETE CONTATTARE LA RECEPTION DIGITANDO IL NUMERO 9 DAL TELEFONO INTERNO ALLA CAMERA</h1>
+            <h1 class="title" id="camere">CAMERE</h1>
+            <div class="room-type">
+                <div class="button-container">
+                    <div class="room-button active">Classic "Malavita"</div>
+                    <div class="room-button">Tripla "Gilestra"</div>
+                    <div class="room-button">Quadrupla "Gilestra"</div>
+                    <div class="room-button">Suite "Principe"</div>
+                </div>
+                <div class="room-content">
+                    <div class="room-image" style="background-image: url(./images/Classic.jpg);"></div>
+                    <div class="room-text">
+                        <h2>Classic "Malavita"</h2>
+                        <p>Le Classic "Malavita" sono camere matrimoniali molto spaziose e luminose. Alcune godono della vista del parco al primo piano, altre al piano terra vantano l’accesso al giardino. Quattro di queste ultime accedono al giardino interno, luogo ideale dove godere di momenti di relax.</p>
+                        <p>Lo stile ricercato che caratterizza ognuna delle camere Classic coniuga un arredo moderno alla pietra viva, originale delle pareti interne. Questo particolare connubio le rende il luogo ideale per trascorrere soggiorni piacevoli e vivere lo charme di Ragusa.</p>
+                        <h3>Dotazione</h3>
+                        <ul>
+                            <li>Ampiezza 30mq</li>
+                            <li>Letto matrimoniale king size</li>
+                            <li>Aria condizionata e riscaldamento autonomo centralizzato</li>
+                            <li>Accesso diretto al giardino</li>
+                            <li>Frigobar</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="thebigsad"></div>
+            <div class="restaurant" id="ristorante">
+                <div class="high-contrast-backdrop">
+                        <img src="./images/logomu.jpeg" alt="Logo Mu Steakhouse">
+                        <p>Fedele alla cucina argentina MU Steakhouse con la sua grande griglia a vista è guidata da esperti Asador che con cura preparano per Voi i migliori tagli di carne nel rispetto della tradizione Argentina, in una atmosfera calda ed elegante.</p>
+                        <p>Per il servizio a pranzo (12:00 - 14:00) è previsto uno speciale menù piscina, mentre la sera (20:00 - 22:30) sarà invece possibile cenare in sala. Per prenotare un tavolo rivolgersi alla reception.</p>
+                    <div class="menù-container">
+                        <a href="./menu/Menù Pranzo.pdf" download><button>Menù Piscina</button></a>
+                        <a href="./menu/Menù Cena.pdf" download><button>Menù Sala</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact" id="contatti">
+                <h1 class="title">Contatti</h1>
+                <div class="contact-container">
+                    <div>
+                        <h3>Reception Hotel</h3>
+                        <p>0932 604140</p>
+                    </div>
+                    <div>
+                        <h3>Mail Hotel</h3>
+                        <p>info@villacarlottahotel.com</p>
+                    </div>
+                    <div>
+                        <h3>Ristorante</h3>
+                        <p>389 216 5617</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </body>
 </html>
